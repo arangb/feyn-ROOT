@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feynman Diagram Gallery</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f5f5f5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 33%;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+.command {
+    font-family: monospace;
+    font-size: 12px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Feynman Diagram Gallery</h1>
+
+<table>
+<tr>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py Hgg</div>
+
+<img src="Higgsprod_gg_fusion.jpg" width="500">
+
+<p>
+<a href="Higgsprod_gg_fusion.pdf">Higgsprod_gg_fusion.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s q &quot;#bar{q}&#x27;&quot; &quot;V*&quot; &quot;V&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_qq_Higgsstrahlung.jpg" width="500">
+
+<p>
+<a href="Higgsprod_qq_Higgsstrahlung.pdf">Higgsprod_qq_Higgsstrahlung.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF &quot;q&quot; &quot;q&#x27;&quot; &quot;W/Z&quot; &quot;W/Z&quot; &quot;q&quot; &quot;q&#x27;&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_VBF.jpg" width="500">
+
+<p>
+<a href="Higgsprod_VBF.pdf">Higgsprod_VBF.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF g g &quot;#bar{q}&quot; &quot;q&quot; &quot;q&quot; &quot;#bar{q}&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_QQH.jpg" width="500">
+
+<p>
+<a href="Higgsprod_QQH.pdf">Higgsprod_QQH.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF g g &quot;#bar{t}&quot; &quot;t&quot; &quot;t&quot; &quot;#bar{t}&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_gg_ttH.jpg" width="500">
+
+<p>
+<a href="Higgsprod_gg_ttH.pdf">Higgsprod_gg_ttH.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF q &quot;#bar{b}&quot; &quot;W&quot; &quot;W&quot; &quot;q&#x27;&quot; &quot;#bar{t}&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_qb_tHq_VBF.jpg" width="500">
+
+<p>
+<a href="Higgsprod_qb_tHq_VBF.pdf">Higgsprod_qb_tHq_VBF.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py BOX g g &quot; &quot; &quot;h&quot; &quot;Z&quot; &quot; &quot; &quot; &quot; &quot;t&quot;</div>
+
+<img src="Higgsprod_HZ_box.jpg" width="500">
+
+<p>
+<a href="Higgsprod_HZ_box.pdf">Higgsprod_HZ_box.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t q &quot;#bar{q}&quot; &quot; &quot; &quot;#gamma&quot; &quot;#gamma&quot;</div>
+
+<img src="LHC_qq_gaga.jpg" width="500">
+
+<p>
+<a href="LHC_qq_gaga.pdf">LHC_qq_gaga.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t q &quot;#bar{q}&quot; &quot; &quot; &quot;Z&quot; &quot;Z&quot;</div>
+
+<img src="LHC_qq_ZZ.jpg" width="500">
+
+<p>
+<a href="LHC_qq_ZZ.pdf">LHC_qq_ZZ.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t &quot;#bar{q}&quot; &quot;q&quot; &quot;q&#x27;&quot; &quot;W^{#plus}&quot; &quot;W^{#minus}&quot;</div>
+
+<img src="LHC_qq_WW.jpg" width="500">
+
+<p>
+<a href="LHC_qq_WW.pdf">LHC_qq_WW.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py sD &quot;q&quot; &quot;#bar{q}&quot; &quot;Z&quot; &quot;f&quot; &quot;#bar{f}&quot; &quot;&quot; &quot;&quot; &quot;Z&quot; &quot;#bar{f}&quot;</div>
+
+<img src="LHC_ZZ_resonant.jpg" width="500">
+
+<p>
+<a href="LHC_ZZ_resonant.pdf">LHC_ZZ_resonant.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py tD &quot;q&quot; &quot;g&quot; &quot;#bar{q}&quot; &quot;#gamma&quot; &quot;q&quot; &quot;&quot; &quot;&quot; &quot;#gamma&quot; &quot;q&quot;</div>
+
+<img src="LHC_qg_gagaj.jpg" width="500">
+
+<p>
+<a href="LHC_qg_gagaj.pdf">LHC_qg_gagaj.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py BOX g g &quot; &quot; &quot;#gamma&quot; &quot;#gamma&quot; &quot; &quot; &quot; &quot; &quot;q&quot;</div>
+
+<img src="LHC_gaga_box.jpg" width="500">
+
+<p>
+<a href="LHC_gaga_box.pdf">LHC_gaga_box.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s &quot;e^{#minus}&quot; &quot;e^{#plus}&quot; &quot;Z*&quot; &quot;Z&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_LEP_Higgsstrahlung.jpg" width="500">
+
+<p>
+<a href="Higgsprod_LEP_Higgsstrahlung.pdf">Higgsprod_LEP_Higgsstrahlung.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF &quot;e^{#minus}&quot; &quot;e^{#plus}&quot; &quot;W&quot; &quot;W&quot; &quot;e^{#minus}&quot; &quot;e^{#plus}&quot; &quot;h&quot;</div>
+
+<img src="Higgsprod_LEP_VBF.jpg" width="500">
+
+<p>
+<a href="Higgsprod_LEP_VBF.pdf">Higgsprod_LEP_VBF.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s &quot;e^{#minus}&quot; &quot;e^{#plus}&quot; &quot;Z/#gamma*&quot; &quot;W^{#minus}&quot; &quot;W^{#plus}&quot;</div>
+
+<img src="LEP_WWprod_schannel.jpg" width="500">
+
+<p>
+<a href="LEP_WWprod_schannel.pdf">LEP_WWprod_schannel.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t &quot;e^{#plus}&quot; &quot;e^{#minus}&quot; &quot;#nu_{e}&quot; &quot;W^{#plus}&quot; &quot;W^{#minus}&quot;</div>
+
+<img src="LEP_WWprod_tchannel.jpg" width="500">
+
+<p>
+<a href="LEP_WWprod_tchannel.pdf">LEP_WWprod_tchannel.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py Hgg Z Z</div>
+
+<img src="Higgsprod_gg_fusion_ZZ.jpg" width="500">
+
+<p>
+<a href="Higgsprod_gg_fusion_ZZ.pdf">Higgsprod_gg_fusion_ZZ.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py BOX g g &quot; &quot; &quot;Z&quot; &quot;Z&quot; &quot; &quot; &quot; &quot; &quot;q&quot;</div>
+
+<img src="LHC_ZZ_box.jpg" width="500">
+
+<p>
+<a href="LHC_ZZ_box.pdf">LHC_ZZ_box.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s g g g t &quot;#bar{t}&quot; #need to activate the True statement to add the Higgs line in between</div>
+
+<img src="Feynman_tt_with_H_correction.jpg" width="500">
+
+<p>
+<a href="Feynman_tt_with_H_correction.pdf">Feynman_tt_with_H_correction.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py BOX g g &quot; &quot; &quot;h&quot; &quot;h&quot; &quot; &quot; &quot; &quot; &quot;t&quot;</div>
+
+<img src="LHC_DiHiggs_box.jpg" width="500">
+
+<p>
+<a href="LHC_DiHiggs_box.pdf">LHC_DiHiggs_box.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py Hgg h h</div>
+
+<img src="LHC_DiHiggs_ggFusion.jpg" width="500">
+
+<p>
+<a href="LHC_DiHiggs_ggFusion.pdf">LHC_DiHiggs_ggFusion.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF q &quot;q&quot; &quot;V&quot; &quot;V&quot; &quot;q&#x27;&quot; &quot;q&#x27;&quot; &quot;h&quot; &quot;h&quot; &quot;h&quot;</div>
+
+<img src="LHC_DiHiggs_VBF.jpg" width="500">
+
+<p>
+<a href="LHC_DiHiggs_VBF.pdf">LHC_DiHiggs_VBF.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s &quot;g&quot; &quot;g&quot; &quot;h&quot; &quot;h&quot; &quot;h&quot;</div>
+
+<img src="LHC_DiHiggs_gg_BSMschannel.jpg" width="500">
+
+<p>
+<a href="LHC_DiHiggs_gg_BSMschannel.pdf">LHC_DiHiggs_gg_BSMschannel.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF &quot;e^{#minus}&quot; &quot;e^{#plus}&quot; &quot;W&quot; &quot;W&quot; &quot;#nu&quot; &quot;#bar{#nu}&quot; &quot;h&quot; &quot;h&quot; &quot;h&quot;</div>
+
+<img src="LC_DiHiggs_VBF.jpg" width="500">
+
+<p>
+<a href="LC_DiHiggs_VBF.pdf">LC_DiHiggs_VBF.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py sD &quot;e^{#minus}&quot; &quot;e^{#plus}&quot; &quot;Z*&quot; &quot;Z&quot; &quot;h&quot; &quot;&quot; &quot;&quot; &quot;h&quot; &quot;h&quot;</div>
+
+<img src="LC_DiHiggs_Hstrahlung.jpg" width="500">
+
+<p>
+<a href="LC_DiHiggs_Hstrahlung.pdf">LC_DiHiggs_Hstrahlung.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py tD  &quot;q&quot; &quot;#bar{q}&quot; &quot; &quot; &quot;W&quot; &quot;g&quot; &quot;&quot; &quot;&quot; &quot;b&quot; &quot;#bar{b}&quot;</div>
+
+<img src="TEV_Wbb.jpg" width="500">
+
+<p>
+<a href="TEV_Wbb.pdf">TEV_Wbb.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s d &quot;#bar{s}&quot; &quot;A^{0}&quot; &quot;s&quot; &quot;#bar{d}&quot;</div>
+
+<img src="KKmixing_2HDM.jpg" width="500">
+
+<p>
+<a href="KKmixing_2HDM.pdf">KKmixing_2HDM.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s u &quot;#bar{d}&quot; &quot;W^{#plus}&quot; &quot;#mu^{#plus}&quot; &quot;#nu_{#mu}&quot;</div>
+
+<img src="Chargedpion_decay.jpg" width="500">
+
+<p>
+<a href="Chargedpion_decay.pdf">Chargedpion_decay.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t &quot;#nu_{#mu}&quot; &quot;e^{#minus}&quot; &quot;Z^{0}&quot; &quot;#nu_{#mu}&quot; &quot;e^{#minus}&quot;</div>
+
+<img src="NeutralCurrent_Gargamelle.jpg" width="500">
+
+<p>
+<a href="NeutralCurrent_Gargamelle.pdf">NeutralCurrent_Gargamelle.pdf</a><br>
+</p>
+
+</td>
+
+
+</tr>
+</table>
+
+</body>
+</html>

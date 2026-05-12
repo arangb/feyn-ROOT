@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feynman Diagram Gallery</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f5f5f5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 33%;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+.command {
+    font-family: monospace;
+    font-size: 12px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Feynman Diagram Gallery</h1>
+
+<table>
+<tr>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF &quot;q&quot; &quot;g&quot; &quot;W&quot; &quot;b&quot; &quot;q&#x27;&quot; &quot;#bar{b}&quot; &quot;t&quot; &quot;W&quot; &quot;b&quot;</div>
+
+<img src="st-tchan.jpg" width="500">
+
+<p>
+<a href="st-tchan.pdf">st-tchan.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py sD &quot;q&quot; &quot;#bar{q}&#x27;&quot; &quot;W^{#plus}&quot; &quot;#bar{b}&quot; &quot;t&quot; &quot;--&quot; &quot;--&quot; &quot;W^{#plus}&quot; &quot;b&quot;</div>
+
+<img src="st-schan.jpg" width="500">
+
+<p>
+<a href="st-schan.pdf">st-schan.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t &quot;b&quot; &quot;g&quot; &quot;-&quot; &quot;W&quot; &quot;t&quot;</div>
+
+<img src="st-tWchan.jpg" width="500">
+
+<p>
+<a href="st-tWchan.pdf">st-tWchan.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py tD &quot;b&quot; &quot;g&quot; &quot;-&quot; &quot;W^{#minus}&quot; &quot;t&quot; &quot;--&quot; &quot;--&quot; &quot;W^{#plus}&quot; &quot;b&quot;</div>
+
+<img src="st-tWchan_decayWb.jpg" width="500">
+
+<p>
+<a href="st-tWchan_decayWb.pdf">st-tWchan_decayWb.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py sDD &#x27;g&#x27; &#x27;g&#x27; &#x27;g&#x27; &#x27;t&#x27; &#x27;#bar{t}&#x27; &#x27;b&#x27; &#x27;W^{#plus}&#x27; &#x27;#bar{b}&#x27; &#x27;W^{#minus}&#x27; &#x27;\ell^{+}&#x27; &#x27;#nu&#x27; &#x27;q&#x27; &#x27;#bar{q}&#x27;</div>
+
+<img src="TTbar_lnuJets.jpg" width="500">
+
+<p>
+<a href="TTbar_lnuJets.pdf">TTbar_lnuJets.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py sDD &#x27;g&#x27; &#x27;g&#x27; &#x27;g&#x27; &#x27;t&#x27; &#x27;#bar{t}&#x27; &#x27;b&#x27; &#x27;W^{#plus}&#x27; &#x27;#bar{b}&#x27; &#x27;W^{#minus}&#x27; &#x27;\ell^{+}&#x27; &#x27;#nu&#x27; &#x27;\ell^{-}&#x27; &#x27;#bar{#nu}&#x27;</div>
+
+<img src="TTbar_lnulnu.jpg" width="500">
+
+<p>
+<a href="TTbar_lnulnu.pdf">TTbar_lnulnu.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py tD &#x27;q&#x27; &#x27;g&#x27; &#x27;-&#x27; &#x27;W&#x27; &#x27;q&#x27;  &#x27;\ell&#x27; &#x27;#bar{#nu}&#x27; &#x27;q&#x27; &#x27;g&#x27;</div>
+
+<img src="WJets.jpg" width="500">
+
+<p>
+<a href="WJets.pdf">WJets.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s g g &quot;g&quot; &quot;g&quot; &quot;g&quot;</div>
+
+<img src="QCD_dijet.jpg" width="500">
+
+<p>
+<a href="QCD_dijet.pdf">QCD_dijet.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py tD q &quot;#bar{q}&quot; &quot;-&quot; &quot;Z&quot; &quot;g&quot; &quot;#nu&quot; &quot;#bar{#nu}&quot; &quot;q&quot; &quot;#bar{q}&quot;</div>
+
+<img src="ZplusJets_nunuJJ_decay.jpg" width="500">
+
+<p>
+<a href="ZplusJets_nunuJJ_decay.pdf">ZplusJets_nunuJJ_decay.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s &#x27;q&#x27; &#x27;#bar{q}&#x27; &#x27;Z&#x27; &#x27;\ell^{+}&#x27; &#x27;\ell^{-}&#x27;</div>
+
+<img src="DrellYan_qqZtoLL.jpg" width="500">
+
+<p>
+<a href="DrellYan_qqZtoLL.pdf">DrellYan_qqZtoLL.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py s &quot;q&quot; &quot;#bar{q}&quot; &quot;Z&quot; &quot;#mu^{#plus}&quot; &quot;#mu^{#minus}&quot;</div>
+
+<img src="DrellYan_qqZtoLLISR.jpg" width="500">
+
+<p>
+<a href="DrellYan_qqZtoLLISR.pdf">DrellYan_qqZtoLLISR.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py BOX &quot;g&quot; &quot;g&quot; &quot;-&quot; &quot;Z&quot; &quot;g&quot; &quot;-&quot; &quot;-&quot; &quot;q&quot;</div>
+
+<img src="Zjets_gg-BOX-Zg.jpg" width="500">
+
+<p>
+<a href="Zjets_gg-BOX-Zg.pdf">Zjets_gg-BOX-Zg.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t &quot;q&quot; &quot;g&quot; &quot;-&quot; &quot;Z&quot; &quot;q&quot;</div>
+
+<img src="Zjets_qg-Zq.jpg" width="500">
+
+<p>
+<a href="Zjets_qg-Zq.pdf">Zjets_qg-Zq.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py t &quot;b&quot; &quot;g&quot; &quot;-&quot; &quot;Z&quot; &quot;b&quot;</div>
+
+<img src="Zjets_bg-Zb.jpg" width="500">
+
+<p>
+<a href="Zjets_bg-Zb.pdf">Zjets_bg-Zb.pdf</a><br>
+</p>
+
+</td>
+
+
+<td>
+<div class="command">python3 ../simpleFeynman.py VBF &quot;g&quot; &quot;g&quot; &quot;q&quot; &quot;#bar{q}&quot; &quot;#bar{q}&quot; &quot;q&quot; &quot;Z&quot;</div>
+
+<img src="Zjets_gg-ZqqVBF.jpg" width="500">
+
+<p>
+<a href="Zjets_gg-ZqqVBF.pdf">Zjets_gg-ZqqVBF.pdf</a><br>
+</p>
+
+</td>
+
+</tr><tr>
+
+<td>
+<div class="command">python3 ../simpleFeynman.py tD q &quot;#bar{q}&quot; &quot;-&quot; &quot;Z&quot; &quot;g&quot; &quot;--&quot; &quot;--&quot; &quot;b&quot; &quot;#bar{b}&quot;</div>
+
+<img src="ZJets_qq-Zbb_decay.jpg" width="500">
+
+<p>
+<a href="ZJets_qq-Zbb_decay.pdf">ZJets_qq-Zbb_decay.pdf</a><br>
+</p>
+
+</td>
+
+
+</tr>
+</table>
+
+</body>
+</html>
