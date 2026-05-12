@@ -8,7 +8,7 @@ Note that we use ROOT's notation for [Greek/Math symbols](https://root.cern/root
 These are all the base diagrams that are available:
 | Code | Diagram Name | Example |
 |--------|--------|:------:|
-| s | s-channel | <img src="SM/DrellYan_qqZtoLL.jpg" width="200"> `python3 simpleFeynman.py s 'q' '#bar{q}' 'Z' '\ell^{+}' '\ell^{-}'`|
+| s | s-channel | <img src="SM/DrellYan_qqZtoLL.jpg" width="200"> <br> `python3 simpleFeynman.py s 'q' '#bar{q}' 'Z' '\ell^{+}' '\ell^{-}'` <br>|
 | t | t-channel | <img src="SM/Zjets_bg-Zb.jpg" width="200">`python3 simpleFeynman.py t "b" "g" "-" "Z" "b"`|
 | sD | s-channel with one decay |  <img src="Higgs/LC_DiHiggs_Hstrahlung.jpg" width="200"> `python3 simpleFeynman.py sD "e^{#minus}" "e^{#plus}" "Z*" "Z" "h" "" "" "h" "h"` |
 | sDD | s-channel with two decays | <img src="SM/TTbar_lnuJets.jpg" width="200"> `python3 simpleFeynman.py sDD 'g' 'g' 'g' 't' '#bar{t}' 'b' 'W^{#plus}' '#bar{b}' 'W^{#minus}' '\ell^{+}' '#nu' 'q' '#bar{q}'` |
