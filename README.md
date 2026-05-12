@@ -5,7 +5,7 @@ There are many basic diagrams available, you just need to tell which particles a
 For example: `python3 simpleFeynman.py s "q" "#bar{q}" "Z" "#mu^{#plus}" "#mu^{#minus}"` produces the s-channel production of a Z boson decaying to muons.
 
 Note that we use ROOT's notation for [Greek/Math symbols](https://root.cern/root/html534/TLatex.html).
-Additional diagrams are available:
+These are all the base diagrams that are available:
 | Code | Diagram Name | Example |
 |--------|--------|:------:|
 | s | s-channel | <img src="SM/DrellYan_qqZtoLL.jpg" width="200"> `python3 simpleFeynman.py s 'q' '#bar{q}' 'Z' '\ell^{+}' '\ell^{-}'`|
