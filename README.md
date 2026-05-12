@@ -29,3 +29,5 @@ to add an ISR gluon to the s-channel diagram.
 
 Note that the use of `\ell` in ROOT is fraught with issues. If you want to use `\ell` in one of the legs, you will then need to run epstopdf to convert the resulting eps file to pdf. This linux script is available by installing `sudo apt install texlive-font-utils`.
 
+
+These scripts were used to make some of the plots in the textbook [Electroweak Symmetry and its Breaking](https://www.worldscientific.com/worldscibooks/10.1142/11883#t=aboutBook), by World Scientific (ISBN: 9789811222245)
