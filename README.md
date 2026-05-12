@@ -2,7 +2,7 @@
 
 Draw Feynman diagrams with ROOT from python. Dependencies are pyROOT (`import ROOT`).
 There are many basic diagrams available, you just need to tell which particles are involved.
-For example: `python3 simpleFeynman.py s "q" "#bar{q}" "Z" "#mu^{#plus}" "#mu^{#minus}"` produces the s-channel production of a Z boson decaying to muons.
+For example, you can just run in the command line: `python3 simpleFeynman.py s "q" "#bar{q}" "Z" "#mu^{#plus}" "#mu^{#minus}"` and that will produce the s-channel production of a Z boson decaying to muons.
 
 Note that we use ROOT's notation for [Greek/Math symbols](https://root.cern/root/html534/TLatex.html).
 These are all the base diagrams that are available:
