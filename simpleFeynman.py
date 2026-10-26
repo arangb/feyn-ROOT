@@ -50,6 +50,57 @@ gStyle.SetLineStyleString(9,"89 20") # the default 9 has a leftover tick in the 
 gStyle.SetLineStyleString(11,"80 20") # old default 9, for horizontal (full ticks), and for arcs (makes it touch both bases)
 wl=0.034
 amp=0.017
+
+# Change default font (default was 62) 
+# gStyle.SetTextFont(42) #62 Helvetica bold, 42 Helvetica
+
+# # We are going to redefine the DrawLatex() call to be able to draw bold symbols:
+# # Define the replacement function
+# def custom_draw_latex(self, x, y, text_string):
+#     """
+#     Overrides TLatex.DrawLatex to render them using TMathText instead.
+#     TLatex doesn't have bold greek letter symbols, but TMathText does.
+#     https://root-forum.cern.ch/t/bold-doesnt-work-with-a/25742
+#     """
+#     # We want everything to be in bold:
+#     newtext = ""
+#     symbols = ["#gamma","#mu","#tau","#phi","#chi","#Phi","#Chi","#lambda"]
+#     #allsymbols = symbols + [re.sub(r'([a-z])', lambda m: m.group(1).upper(), item, count=1) for item in symbols]
+#     #  
+#     if any(s in text_string for s in symbols):
+#         newtext = r"\boldsymbol{" + text_string + r"}"
+#     else:
+#         newtext = r"\mathbf{" + text_string + r"}"
+#     newtext = newtext.replace("#", "\\")
+#     newtext = newtext.replace(r"\boldsymbol{\\", r"\boldsymbol{")
+#     print('AGB', newtext)
+# 
+#     # Create TMathText at the target coordinates
+#     mt = TMathText(x, y, newtext)
+#     
+#     # Inherit text attributes set on the TLatex object (size, color, alignment)
+#     #mt.SetTextSize(self.GetTextSize())
+#     mt.SetTextSize(self.GetTextSize() if self.GetTextSize() > 0 else 0.18)
+#     #mt.SetTextColor(self.GetTextColor())
+#     mt.SetTextAlign(self.GetTextAlign())
+#     #mt.SetTextAngle(self.GetTextAngle())
+#     #mt.SetTextFont(self.GetTextFont())
+#     mt.SetTextFont(132 if self.GetTextFont() in [62, 0] else self.GetTextFont())
+#     
+#     # Draw it onto the active canvas
+#     mt.Draw()
+#     
+#     # Prevent Python's garbage collector from deleting the text immediately
+#     if not hasattr(self, "_hidden_math_texts"):
+#         self._hidden_math_texts = []
+#     self._hidden_math_texts.append(mt)
+#     
+#     return mt
+# 
+# # Monkey-patch ROOT.TLatex so all existing code uses our function
+# TLatex.DrawLatex = custom_draw_latex
+
+
 def get_line(p='g',x1=10,y1=10,x2=60,y2=10,wl=0.034,amp=0.017,arrowsize=0.03):
     ''' Decide what line to draw based on the label of the particle '''
     line=TCurlyLine(x1, y1, x2, y2, wl, amp) # start as gluon 
@@ -322,7 +373,7 @@ def GenericVBFProd(a="q", b="q'", chi="W/Z", clo="W/Z", d="q", e="q'", h="h", h1
      If clo == " " the line will be a fermion and print nothing.
      The slant boolean can be used to raise/lower the d/e lines by 10 pixels
     '''
-    slant = False # if False, a || d and b || e. If False, dy(d)=5 and dy(e)=-5
+    slant = True # if False, a || d and b || e. If False, dy(d)=5 and dy(e)=-5
     inslant = True # if False clo || chi. If True, clo and chi have an angle and h is shorter
     arguments = locals()
     c1 = TCanvas("c1", "A canvas", 10,10, 500, 300)
@@ -463,7 +514,7 @@ def TChWithDecay(a="g", b="g", c=" ", d="t", e="#bar{t}", d1="W^{#plus}", d2="b"
     savefile(c1,arguments,"tch-decay.pdf")
     return
     
-def SChWithDecay(a="g", b="g", c="g", d="t", e="#bar{t}", d1="W^{#plus}", d2="b", e1="W^{#minus}", e2="#bar{b}", vtx=False):
+def SChWithDecay(a="g", b="g", c="g", d="t", e="#bar{t}", d1="W^{#plus}", d2="b", e1="W^{#minus}", e2="#bar{b}", vtx=True):
     r'''
     If you leave d1 and d2 as empty strings "", the d line will extend until the end
     a          / d1 
@@ -495,7 +546,7 @@ def SChWithDecay(a="g", b="g", c="g", d="t", e="#bar{t}", d1="W^{#plus}", d2="b"
     #
     middle = get_line(c,40, 55, 70, 55)
     middle.Draw()
-    t.DrawLatex(60,60,c) 
+    t.DrawLatex(57,60,c) 
     #
     rt = get_line(d,70, 55, 100, 80)
     if (d1 == "" and d2 ==""): # this line does not decay, extend to the end
@@ -504,12 +555,12 @@ def SChWithDecay(a="g", b="g", c="g", d="t", e="#bar{t}", d1="W^{#plus}", d2="b"
         t.DrawLatex(132,78,d) # end of line
     else:
         t.SetTextAlign(20) # center justified
-        t.DrawLatex(85,75,d) # middle of line 
+        t.DrawLatex(80 if d1 == "" else 85,73,d) # middle of line
     rt.Draw()
     #
     rb = get_line(e,70, 55, 100, 30)
     rb.Draw()
-    t.DrawLatex(80,30,e) # middle of line
+    t.DrawLatex(80 if d1 == "" else 85,30,e) # middle of line
     # Daughters:
     if not (d1 == "" and d2 ==""): 
         dt = get_line(d1,100,80,130,100)
@@ -530,15 +581,18 @@ def SChWithDecay(a="g", b="g", c="g", d="t", e="#bar{t}", d1="W^{#plus}", d2="b"
     t.DrawLatex(132,8,e2)
 
     if vtx: # draw vertices as dots 70, 55, 100, 30
-        # marker at beginning of e:
-        #be = TMarker(70,55,20); be.SetMarkerColor(1); be.SetMarkerSize(1.3); ee.Draw()
-        #t.SetTextAlign(22); t.DrawLatex(70,48,"#lambda") #"g"
+        if d1 =='': 
+            # marker at beginning of e:
+            be = TMarker(70,55,20); be.SetMarkerColor(1); be.SetMarkerSize(1.3); be.Draw()
+            t.SetTextAlign(22); t.DrawLatex(70,48,"#lambda") #"g"
+        else:
+            # marker at end of d:
+            ed = TMarker(100,80,20); ed.SetMarkerColor(1); ed.SetMarkerSize(1.3); ed.Draw()
+            t.SetTextAlign(22); t.DrawLatex(100,88,"#lambda") #"g"
         # marker at end of e:
         ee = TMarker(100,30,20); ee.SetMarkerColor(1); ee.SetMarkerSize(1.3); ee.Draw()
         t.SetTextAlign(22); t.DrawLatex(100,23,"#lambda") #"g"
-        # marker at end of d:
-        ed = TMarker(100,80,20); ed.SetMarkerColor(1); ed.SetMarkerSize(1.3); ed.Draw()
-        t.SetTextAlign(22); t.DrawLatex(100,88,"#lambda") #"g"
+        
 
     c1.Update()
     savefile(c1,arguments,"sch-decay.pdf")
@@ -769,7 +823,7 @@ def TripleT(a="q", b="q'", chi="W/Z", cmi="W/Z", clo="W/Z", d="q", e="q'", h="h"
     t.DrawLatex(115, 8 if slant == True else 18,e) # end of line
     #
     c1.Update()
-    savefile(c1,arguements,"TripleT.pdf")
+    savefile(c1,arguments,"TripleT.pdf")
     return
 
 

@@ -33,7 +33,14 @@ mv -f TripleT.pdf SVJ_gg_ChiChiqq_TripleT.pdf # Direct production + 2 jets
 #
 
 # If you want to bypass the reading of the command line, to pass the ISR option:
-python3 -c "from simpleFeynman import *; simpleSCh('q','#bar{q}','Z\'','#chi','#bar{#chi}',ISR='g')"
+#python3 -c "from simpleFeynman import *; simpleSCh('q','#bar{q}','Z\'','#chi','#bar{#chi}',ISR='g')"
 # Note the escape on the prime in Z'
 
-
+# For the paper:
+#python3 -c "from simpleFeynman import *; simpleTCh('q', '#bar{q}', '#Phi', '#chi', '#bar{#chi}', False, False, '', True, True)"
+#mv -f tch-feyn.pdf SVJ_qq_ChiChi_tchannel.pdf
+# with True vtx:
+#python3 ../simpleFeynman.py sD q g "q" "#chi" "#Phi" "--" "--" q "#bar{#chi}"
+#mv -f sch-decay.pdf SVJ_qg_PhiChi_schannel_Decay.pdf
+#python3 ../simpleFeynman.py sD g g g "#Phi" "#Phi" q "#bar{#chi}" "#bar{q}" "#chi"
+#mv -f sch-decay.pdf SVJ_gg_PhiPhi_schannel_Decay.pdf # Pair production sch gg

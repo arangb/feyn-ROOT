@@ -58,5 +58,7 @@ mv -f GenericVBF.pdf Zjets_gg-ZqqVBF.pdf
 # qq tchannel Zg with g -> bb
 python3 ../simpleFeynman.py tD q "#bar{q}" "-" "Z" "g" "--" "--" "b" "#bar{b}"
 mv -f tch-decay.pdf ZJets_qq-Zbb_decay.pdf
+python3 ../simpleFeynman.py VBF q "q'" q g Z g q
+mv -f GenericVBF.pdf Zjets_qq-Zqg.pdf
 
 

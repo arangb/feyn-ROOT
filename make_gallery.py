@@ -52,6 +52,8 @@ def parse_script(filename):
             elif line.startswith("mv") or line.startswith("epstopdf"):
                 parts = line.split()
                 # Expect: mv -f source.pdf target.pdf or mv source.pdf target.pdf
+                if '#' in parts: # remove comments at the end of the line
+                    parts = parts[:parts.index('#')]
                 if len(parts) >= 3 and current_command:
                     # Last argument is the destination file
                     output_pdf = parts[-1]
@@ -63,6 +65,7 @@ def parse_script(filename):
 
                     current_command = None
 
+    print(entries)
     return entries
 
 def pdf_to_jpg(pdf_file):
